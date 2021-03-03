@@ -1,25 +1,31 @@
 import React from 'react';
-import {StyleSheet, View, Image} from 'react-native';
+import {StyleSheet, View, TouchableWithoutFeedback} from 'react-native';
 
 //custom component import
 import RoundBtn from '../components/button';
+import Logo from '../components/logo'
 
 
 
-function LoginSign({navigation}){
+const LoginSign = ({ navigation }) =>{
     return(
     <View style={styles.screen}>
 
-    <Image
-    source={require('../assets/images/choyceslogo.jpeg')}
-    style={styles.image}/>
+    <Logo />
 
     <RoundBtn buttontext="Login"
         style={styles.loginBtn}
     />
+
     <RoundBtn buttontext="Sign Up"
+                screenName='GetStarted'
         style={styles.signBtn}
+
+        
+        
     />
+
+    
 
     </View>
 
@@ -36,11 +42,5 @@ const styles=StyleSheet.create({
     signBtn: {
         backgroundColor: '#d6204e',
     },
-    image: {
-        width: '80%',
-        resizeMode: 'contain',
-        marginTop: 80,
-        alignSelf: 'center',
-    }
 });
 export default LoginSign;
