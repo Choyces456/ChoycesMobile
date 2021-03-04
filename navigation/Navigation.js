@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Welcome from '../screens/Welcome';
 import LoginSign from '../screens/LoginSign';
 import GetStarted from '../screens/GetStarted';
+import LoginPage from '../screens/LoginPage';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,11 @@ function RootStack({navigation}) {
     name="LoginSign"
     component={LoginSign}
     options={{headerShown:false}}/>
+
+    <Stack.Screen
+    name="LoginPage"
+    component={LoginPage}
+    options={{headerShown:false}}/> 
 
     <Stack.Screen
     name="GetStarted"
