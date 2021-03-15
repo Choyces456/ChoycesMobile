@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, TouchableWithoutFeedback} from 'react-native';
+import { StyleSheet, View, TouchableWithoutFeedback } from 'react-native';
 
 //custom component import
 import RoundBtn from '../components/button';
@@ -7,35 +7,39 @@ import Logo from '../components/logo'
 
 
 
-const LoginSign = ({ navigation }) =>{
-    return(
-    <View style={styles.screen}>
+const LoginSign = ({ navigation }) => {
+    return (
+        <View style={styles.screen}>
 
-    <Logo />
+            <Logo />
 
+<<<<<<< HEAD
     <RoundBtn buttontext="Login"
         style={styles.loginBtn}
         screenName='Welcome'
     />
+=======
+            <RoundBtn buttontext="Login"
+                screenName='LoginPage'
+                style={styles.loginBtn}
+            />
+>>>>>>> 82e221f87cecbf2a3c1cec3862610c9a6b09d3ba
 
-    <RoundBtn buttontext="Sign Up"
+            <RoundBtn buttontext="Sign Up"
                 screenName='GetStarted'
-        style={styles.signBtn}
+                style={styles.signBtn}
+            />
 
-        
-        
-    />
 
-    
 
-    </View>
+        </View>
 
     )
 };
 
-const styles=StyleSheet.create({
+const styles = StyleSheet.create({
     screen: {
-        flex:1,
+        flex: 1,
     },
     loginBtn: {
         backgroundColor: '#ffa500',
