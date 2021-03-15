@@ -20,6 +20,7 @@ export default class DropList extends Component {
                 <Ionicons name="person-outline" size={24} color="white" style={styles.icon} />
 
                 <Picker
+                useNativeAndroidPickerStyle={true}
                     style={styles.picker}
                     prompt="Choose your login profile"
                     selectedValue={this.state.loginType}
@@ -27,12 +28,12 @@ export default class DropList extends Component {
                     mode="dropdown"
                     textStyle={styles.pickerText}
                 >
-                    <Ionicons name="person-outline" size={24} color="white" />
+                   
 
-                    <Picker.Item label="Educator" value="educator" />
-                    <Picker.Item label="Employee" value="employee" />
-                    <Picker.Item label="Parent" value="parent" />
-                    <Picker.Item label="Student" value="student" />
+                    <Picker.Item label="Educator" value="educator" key="1"/>
+                    <Picker.Item label="Employee" value="employee" key="2"/>
+                    <Picker.Item label="Parent" value="parent" key="3"/>
+                    <Picker.Item label="Student" value="student"  key="4"/>
                 </Picker>
 
             </View>
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
 
     },
     pickerText: {
-        flex: 0.5,
+        flex: 1,
         top: -8,
         color: '#FFFFFF',
         fontSize: 22,

@@ -13,17 +13,10 @@ const LoginSign = ({ navigation }) => {
 
             <Logo />
 
-<<<<<<< HEAD
-    <RoundBtn buttontext="Login"
-        style={styles.loginBtn}
-        screenName='Welcome'
-    />
-=======
             <RoundBtn buttontext="Login"
                 screenName='LoginPage'
                 style={styles.loginBtn}
             />
->>>>>>> 82e221f87cecbf2a3c1cec3862610c9a6b09d3ba
 
             <RoundBtn buttontext="Sign Up"
                 screenName='GetStarted'
