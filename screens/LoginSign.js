@@ -15,6 +15,7 @@ const LoginSign = ({ navigation }) =>{
 
     <RoundBtn buttontext="Login"
         style={styles.loginBtn}
+        screenName='Welcome'
     />
 
     <RoundBtn buttontext="Sign Up"
