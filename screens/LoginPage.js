@@ -39,7 +39,7 @@ function LoginPage({ navigation }) {
            
             <RoundBtn buttontext="Login"
                 style={styles.loginBtn}
-                screenName='Welcome'
+                onPress={() => navigation.navigate('Welcome')}
             />
 
         </View>
@@ -51,6 +51,8 @@ function LoginPage({ navigation }) {
 const styles = StyleSheet.create({
     screen: {
         flex: 1,
+        flexDirection:'column',
+        justifyContent: 'space-evenly'
     },
     username: {
         backgroundColor: '#ffa500',

@@ -14,9 +14,9 @@ const Logo = () =>{
 
 const styles=StyleSheet.create({
     image: {
-        width: '80%',
+        width: '70%',
+        maxHeight: '35%',
         resizeMode: 'contain',
-        marginTop: 80,
         alignSelf: 'center',
     }
    

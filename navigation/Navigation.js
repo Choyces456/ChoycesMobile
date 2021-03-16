@@ -7,6 +7,7 @@ import Welcome from '../screens/Welcome';
 import LoginSign from '../screens/LoginSign';
 import GetStarted from '../screens/GetStarted';
 import LoginPage from '../screens/LoginPage';
+import GetStarted2 from '../screens/GetStarted2';
 
 const Stack = createStackNavigator();
 
@@ -33,6 +34,11 @@ function RootStack({navigation}) {
     <Stack.Screen
     name="GetStarted"
     component={GetStarted}
+    options={{headerShown:false}}/>
+
+    <Stack.Screen
+    name="GetStarted2"
+    component={GetStarted2}
     options={{headerShown:false}}/>
 
 

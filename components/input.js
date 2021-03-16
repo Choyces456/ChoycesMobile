@@ -20,7 +20,7 @@ const Input = ({ iconName, value, onChangeText, placeholder, placeholderTextColo
                 value={text}
                 autoCapitalize='none'>
             </TextInput>
-            <Text>{text}</Text> 
+            
         </View>
     )
 };

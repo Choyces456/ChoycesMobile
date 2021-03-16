@@ -14,13 +14,13 @@ const LoginSign = ({ navigation }) => {
             <Logo />
 
             <RoundBtn buttontext="Login"
-                screenName='LoginPage'
                 style={styles.loginBtn}
+                onPress={() => navigation.navigate('LoginPage')}
             />
 
             <RoundBtn buttontext="Sign Up"
-                screenName='GetStarted'
                 style={styles.signBtn}
+                onPress={() => navigation.navigate('GetStarted')}
             />
 
 

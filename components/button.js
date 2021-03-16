@@ -1,14 +1,11 @@
 import React from 'react';
 import {StyleSheet, View, TouchableOpacity, Text} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
 
 
 
-function Button({screenName, ...props}){
-    const navigation = useNavigation();
+function Button({onPress, ...props}){
     return(
-        <TouchableOpacity  activeOpacity={0.6}
-        onPress={() => navigation.navigate(screenName)}>
+        <TouchableOpacity  activeOpacity={0.6} onPress={onPress}>
         <View style={{...styles.signUpButton, ...props.style}}>
             <Text style={styles.signUpButtonText}>
                 {props.buttontext}

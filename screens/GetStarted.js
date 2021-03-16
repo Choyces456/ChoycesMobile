@@ -1,19 +1,25 @@
 import React, {useState} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 
+import RoundBtn from '../components/button';
 import Logo from '../components/logo';
 import { Picker } from 'react-native-picker-dropdown'
 import { Ionicons } from '@expo/vector-icons';
 
 
 function GetStarted({navigation}){
-    const [loginType, setLoginType] = useState("Who's using this app?");
+
+    const [loginType, setLoginType] = useState("educator");
+    
+    var type = `{type: "${loginType}"}`;
+    
     return(
         <View style={styles.screen}>
         <Logo/>
         <View style={styles.container}>
                 <Ionicons name="person-outline" size={24} color="white" style={styles.icon} />
         <Picker
+        prompt= "select a login type"
         style={styles.picker}
         selectedValue={loginType}
         onValueChange={(itemValue, itemIndex) =>
@@ -28,6 +34,14 @@ function GetStarted({navigation}){
                     <Picker.Item label="Student" value="student"  key="4"/>
 
         </Picker>
+        </View>
+        <View>
+        <RoundBtn buttontext="Continue"
+                style={styles.signBtn}
+                onPress={() => navigation.navigate('GetStarted2', {
+                    type: loginType
+                })}
+            />
         </View>
 
 
@@ -83,6 +97,10 @@ const styles = StyleSheet.create({
         padding: 10,
         fontSize: 18,
         height: 44,
+    },
+    signBtn: {
+        marginTop: 40,
+        backgroundColor: '#d6204e',
     },
     bottomLink: {
         flex: 1,
