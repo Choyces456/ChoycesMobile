@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 import RoundBtn from '../components/button';
 import Logo from '../components/logo';
@@ -52,7 +52,7 @@ function GetStarted({navigation}){
             </Text>
 
 
-            <Text>Login</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('LoginPage')}><Text style={{fontSize: 18, color: 'blue'}}>Login</Text></TouchableOpacity> 
         </View>
 
         </View>
@@ -62,13 +62,17 @@ function GetStarted({navigation}){
 const styles = StyleSheet.create({
     screen: {
         flex: 1,
+        alignContent: 'center',
+        justifyContent: 'flex-end'
     },
     container: {
         flex: 0.4,
         flexDirection: 'row',
-        width: '95%',
-        minHeight: 40,
-        maxHeight: 40,
+        justifyContent: 'center',
+        width: '85%',
+        bottom: -20,
+        minHeight: 50,
+        maxHeight: 50,
         borderRadius: 20,
         backgroundColor: '#ffa500',
         alignSelf: 'center',
@@ -83,14 +87,14 @@ const styles = StyleSheet.create({
     picker: {
         flex: 1,
         alignSelf:'flex-end',
-        height: 20,
+        height: 30,
         
 
     },
     pickerText: {
         flex: 1,
         color: '#FFFFFF',
-        fontSize: 22,
+        fontSize: 18,
         textAlign: 'center'
     },
     item: {
@@ -99,14 +103,16 @@ const styles = StyleSheet.create({
         height: 44,
     },
     signBtn: {
-        marginTop: 40,
+        marginTop: "10%",
+        height: 40,
+        textAlign: 'center',
         backgroundColor: '#d6204e',
     },
     bottomLink: {
         flex: 1,
         justifyContent: 'flex-end',
         alignItems: 'center',
-        marginBottom: 20,
+        marginBottom: "20%",
     }
 });
 

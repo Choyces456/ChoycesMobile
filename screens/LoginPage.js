@@ -11,6 +11,7 @@ Update 1: Created an input component, but not sure about passing down values, wi
 
 import RoundBtn from '../components/button';
 import Input from '../components/input';
+import Logo from '../components/logo';
 
 
 
@@ -18,9 +19,7 @@ function LoginPage({ navigation }) {
     return (
         <View style={styles.screen}>
 
-            <Image
-                source={require('../assets/images/choyceslogo.jpeg')}
-                style={styles.image} />
+        <Logo/>
 
             <Input
                 style={styles.username}
@@ -52,7 +51,7 @@ const styles = StyleSheet.create({
     screen: {
         flex: 1,
         flexDirection:'column',
-        justifyContent: 'space-evenly'
+        justifyContent: 'center'
     },
     username: {
         backgroundColor: '#ffa500',

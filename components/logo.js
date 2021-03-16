@@ -6,7 +6,7 @@ import {StyleSheet, Image} from 'react-native';
 const Logo = () =>{
     return(
         <Image
-    source={require('../assets/images/choyceslogo.jpeg')}
+    source={require('../assets/images/choyceslogo.png')}
     style={styles.image}/>
 
     )
@@ -14,8 +14,8 @@ const Logo = () =>{
 
 const styles=StyleSheet.create({
     image: {
-        width: '70%',
-        maxHeight: '35%',
+        width: '65%',
+        maxHeight: '30%',
         resizeMode: 'contain',
         alignSelf: 'center',
     }

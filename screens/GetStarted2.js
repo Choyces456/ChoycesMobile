@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, View, Text, ScrollView} from 'react-native';
+import {StyleSheet, View, Text, ScrollView, TouchableOpacity} from 'react-native';
 
 
 import Logo from '../components/logo';
@@ -11,12 +11,12 @@ const GetStarted2 = ({navigation, route}) => {
     return(
         <View  style={styles.screen}>
             <Logo/>
-            <View style={{flex: 0.5, alignContent: 'center', top: -50}}>
-            <Text style={{fontSize: 22, fontWeight: 'bold', }}>
+            <View style={{flex: 2, textAlign: 'center', alignContent: 'center', top: -50, }}>
+            <Text style={{marginTop: 30, fontSize: 25,textAlign:'center', fontWeight: 'bold', }}>
             Get Started with your {type} account
             </Text>
             </View>
-            <View style={{flex: 8, justifyContent: 'flex-start'}}>
+            <View style={{flex: 10, justifyContent: 'flex-start', borderTopWidth: 2, borderColor: "rgba(100, 31, 152, 0.3)"}}>
             <ScrollView>
             <Input
                 style={{backgroundColor: '#ffa500',height: 50, margin: 5,}}
@@ -62,7 +62,8 @@ const GetStarted2 = ({navigation, route}) => {
             
 
 
-            <Text>Login</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('LoginPage')}><Text style={{fontSize: 18, color: 'blue'}}>Login</Text></TouchableOpacity> 
+
         </View>
         </ScrollView>
             </View>

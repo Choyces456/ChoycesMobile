@@ -33,6 +33,7 @@ const LoginSign = ({ navigation }) => {
 const styles = StyleSheet.create({
     screen: {
         flex: 1,
+        paddingTop: "40%"
     },
     loginBtn: {
         backgroundColor: '#ffa500',

@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View, Text, Image, TouchableWithoutFeedback} from 'react-native';
-
+import Logo from '../components/logo';
 
 function Welcome({ navigation }){
     return(
@@ -8,14 +8,10 @@ function Welcome({ navigation }){
         onPress={() => navigation.navigate('LoginSign')}>
         <View  style={styles.screen}>
 
-        <Image
-        source={require('../assets/images/choyceslogo.jpeg')}
-            style={styles.image}
-        />
-
-
+       
+        <Logo/>
         <Text style={styles.text}>
-            WELCOME!
+            WELCOME
         </Text>
         </View>
 
@@ -26,7 +22,7 @@ function Welcome({ navigation }){
 const styles = StyleSheet.create({
     screen: {
         flex:1,
-        alignContent: 'center'
+        justifyContent: 'center'
 
     },
     image: {
@@ -35,6 +31,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
     },
     text: {
+       
         fontSize:38,
         fontWeight: 'bold',
         alignSelf: 'center',
