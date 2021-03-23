@@ -86,13 +86,14 @@ const styles = StyleSheet.create({
     },
     picker: {
         flex: 1,
-        alignSelf:'flex-end',
+        alignSelf:'center',
         height: 30,
         
 
     },
     pickerText: {
-        flex: 1,
+
+        padding: 5,
         color: '#FFFFFF',
         fontSize: 18,
         textAlign: 'center'
