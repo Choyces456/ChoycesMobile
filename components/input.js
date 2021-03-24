@@ -6,7 +6,6 @@ import { Ionicons } from '@expo/vector-icons';
 */
 const Input = ({ iconName, value, onChangeText, placeholder, placeholderTextColor, secureTextEntry, ...props }) => {
     const { inputStyle, containerStyle } = styles;
-    const [text, setText] = useState('');
     return (
         <View style={{ ...styles.containerStyle, ...props.style }}>
             <Ionicons name={iconName}size={24} color="white" style={styles.icon} />
@@ -16,8 +15,6 @@ const Input = ({ iconName, value, onChangeText, placeholder, placeholderTextColo
                 placeholderTextColor={placeholderTextColor}
                 autoCorrect={false}
                 style={inputStyle}
-                onChangeText={text => setText(text)}
-                value={text}
                 autoCapitalize='none'>
             </TextInput>
             
