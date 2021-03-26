@@ -27,7 +27,8 @@ const styles=StyleSheet.create({
 
     },
     signUpButtonText: {
-        fontSize: 18,
+        fontSize: 26,
+        fontWeight: 'bold',
         color: 'white',
         paddingTop: 5,
     },

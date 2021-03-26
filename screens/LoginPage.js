@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image, Button } from 'react-native';
 
 
 
@@ -40,6 +40,12 @@ function LoginPage({ navigation }) {
                 style={styles.loginBtn}
                 onPress={() => navigation.navigate('Welcome')}
             />
+            <View style ={ {marginTop: 30}}>
+            <Button title=" EduLanding" onPress={() => navigation.navigate('EduLanding')}/>
+            <Button title=" EmpLanding" onPress={() => navigation.navigate('EmpLanding')}/>
+            <Button title=" StudentLanding" onPress={() => navigation.navigate('StudentLanding')}/>
+            <Button title=" ParentLanding" onPress={() => navigation.navigate('ParentLanding')}/>
+</View>
 
         </View>
 

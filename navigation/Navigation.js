@@ -9,6 +9,21 @@ import GetStarted from '../screens/GetStarted';
 import LoginPage from '../screens/LoginPage';
 import GetStarted2 from '../screens/GetStarted2';
 
+//Educator
+import EduLanding from '../screens/educator/EduLanding';
+
+//Employee
+import EmpLanding from '../screens/employee/EmpLanding';
+
+//Student 
+import StudentLanding from '../screens/student/StudentLanding';
+
+//Parent 
+import ParentLanding from '../screens/parent/ParentLanding';
+
+
+
+
 const Stack = createStackNavigator();
 
 function RootStack({navigation}) {
@@ -17,6 +32,7 @@ function RootStack({navigation}) {
     initialRouteName="Welcome">
     
     <Stack.Screen
+    // LOGIN REGISTER SECTION *************************************
     name="Welcome"
     component={Welcome}
     options={{headerShown:false}}/>
@@ -39,6 +55,30 @@ function RootStack({navigation}) {
     <Stack.Screen
     name="GetStarted2"
     component={GetStarted2}
+    options={{headerShown:false}}/>
+
+    <Stack.Screen
+    //Educator section *************************************************
+    name="EduLanding"
+    component={EduLanding}
+    options={{headerShown:false}}/>
+
+<Stack.Screen
+    //Employee section *************************************************
+    name="EmpLanding"
+    component={EmpLanding}
+    options={{headerShown:false}}/>
+
+<Stack.Screen
+    //Student section *************************************************
+    name="StudentLanding"
+    component={StudentLanding}
+    options={{headerShown:false}}/>
+
+<Stack.Screen
+    //Parent section *************************************************
+    name="ParentLanding"
+    component={ParentLanding}
     options={{headerShown:false}}/>
 
 
